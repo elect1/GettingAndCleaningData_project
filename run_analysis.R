@@ -110,10 +110,13 @@ for ( i in 1:length(subject_list) ) {
 
 colnames(x) <- colnames(mean_std_data)  ## restore original column names
 
-## write tidy summary to file
+## write tidy summary to file (*.csv and *.txt formats)
 
 tidyfile2 <- paste( datadir, "/Second_tidy_file_Summary.csv", sep="" )
 write.csv( x, file=tidyfile2, row.names=FALSE )
+
+tidyfile3 <- paste( datadir, "/Second_tidy_file_Summary.txt", sep="" )
+write.table( x, file=tidyfile3, row.names=FALSE )
 
 ## write codebook
 source( "write_HAR_analysis_Codebook.R")

@@ -7,6 +7,7 @@ fileConn <- file( Codebook )
 
 file1 <- sub( paste( datadir,"/",sep="" ), "", tidyfile1 )
 file2 <- sub( paste( datadir,"/",sep="" ), "", tidyfile2 )
+file3 <- sub( paste( datadir,"/",sep="" ), "", tidyfile3 )
 
 mdtext <- ""
 
@@ -17,7 +18,7 @@ string <- "The following describes the column names"
 string <- paste( string, "of the data set contained in file")
 string <- paste( string, " **",file1,"**, as well as the", sep="" )
 string <- paste( string, "companion summary data set contained in file" )
-string <- paste( string, " **",file2,"**.", sep="" )
+string <- paste( string, " **",file2,"** (alternatively, **",file3,"**).", sep="" )
 string <- paste( string, "Both of these files were generated")
 string <- paste( string, "from scratch by running the R script")
 string <- paste( string, "*run_analysis.R*.")
@@ -50,20 +51,20 @@ string <- paste( string, "units (g's), while gyro output measurements")
 string <- paste( string, "are in radians/seconds.  Variable names")
 string <- paste( string, " starting with *frequency* refer to the corresponding", sep="" )
 string <- paste( string, "frequency-domain measurements.")
-string <- c( string, "" )
+##string <- c( string, "" )
 mdtext <- c( mdtext, string )
 
 for ( k in 1:ncol(mean_std_data) ) {
     string <- ""
     string <- paste( string, "Column ", k, ": ", sep="" )
     string <- paste( string, " *", names(mean_std_data)[k], "*", sep="" )
-    mdtext <- c( mdtext, string )
+    mdtext <- c( mdtext, "", string )
 }
 
 string <- c( "", "#### Summary ####", "" )
 mdtext <- c( mdtext, string )
 
-string <- paste( "The summary file **", file2, "**", sep="" )
+string <- paste( "The summary file **",file2,"** (alternatively **",file3,"**)", sep="" )
 string <- paste( string, "displays the mean values of each of the" )
 string <- paste( string, "measured (feature) variables when" )
 string <- paste( string, "*split* per subject and per activity.")
