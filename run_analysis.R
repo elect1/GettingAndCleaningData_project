@@ -2,6 +2,7 @@
 ## Script name: run_analysis.R
 
 datadir <- "UCI_HARUS_data"  ## where to download the data
+datadir <- "."               ## where to download the data (per assignment instructions)
 
 library( dplyr )  ## needed for rename(), mutate(), and select()
 
