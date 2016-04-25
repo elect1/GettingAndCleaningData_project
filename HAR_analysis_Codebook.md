@@ -1,6 +1,6 @@
 # HAR Analysis Codebook
 
-The following describes the column names of the data set contained in file **First_tidy_file.csv**, as well as the companion summary data set contained in file **Second_tidy_file_Summary.csv**. Both of these files were generated from scratch by running the R script *run_analysis.R*.
+The following describes the column names of the data set contained in file **First_tidy_file.csv**, as well as the companion summary data set contained in file **Second_tidy_file_Summary.csv** (alternatively, **Second_tidy_file_Summary.txt**). Both of these files were generated from scratch by running the R script *run_analysis.R*.
 
 #### Variables ####
 
@@ -152,5 +152,5 @@ Column 69:  *frequencyBodyBodyGyroJerkMagnitudeStandardDeviation*
 
 #### Summary ####
 
-The summary file **Second_tidy_file_Summary.csv** displays the mean values of each of the measured (feature) variables when *split* per subject and per activity.
+The summary file **Second_tidy_file_Summary.csv** (alternatively **Second_tidy_file_Summary.txt**) displays the mean values of each of the measured (feature) variables when *split* per subject and per activity.
 
