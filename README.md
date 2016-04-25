@@ -6,7 +6,7 @@ Version 1.0  (Anguita D., et al. *Human Activity Recognition on Smartphones usin
 #### Synopsis ####
 The R language analysis script **run_analysis.R** reads in zipped raw data and produces two tidy data sets in the following comma separated value files:
 - *First_tidy_file.csv*, and
-- *Second_tidy_file_Summary.csv*
+- *Second_tidy_file_Summary.csv* (also: *Second_tidy_file_Summary.txt*)
 
 The codebook describing the variables for these files is included here as the following file:
 - *HAR_analysis_Codebook.md*
@@ -38,7 +38,7 @@ The **run_analysis.R** script performs the following:
 1. The *mean_std_data* data frame is first split based on subject ID.
 2. For each subject ID, the data is then further split based on activity.
 3. For each of the resulting data blocks, a column mean is performed on the feature variables, and the results are aggregated via row-binding in a new summary data set named *x*.
-4. Finally, the new *x* data set is written to comma separated value file **Second_tidy_file_Summary.csv**.
+4. Finally, the new *x* data set is written to comma separated value file **Second_tidy_file_Summary.csv** (and also **Second_tidy_file_Summary.txt**).
 
 ##### Automated Codebook generation #####
 
